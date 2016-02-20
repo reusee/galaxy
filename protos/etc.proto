@@ -1,0 +1,14 @@
+syntax = "proto3";
+package etc;
+
+service Etc {
+  rpc Get(GetReq) returns (GetReply) {}
+}
+
+message GetReq {
+  string key = 1;
+}
+
+message GetReply {
+  string value = 1;
+}
